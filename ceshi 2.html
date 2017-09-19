@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+    <title>微信支付样例-支付</title>
+</head>
+<style>
+.section {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 30px;
+    width: 130px;
+    font-size: 16px;
+}
+.number {
+    -webkit-flex: 1;
+    flex: 1;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-align: center;
+}
+.decrement, .increment {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 20px;
+}
+</style>
+<body>
+<div class="container">
+    <div class="section">
+        <div class="increment">＋</div>
+    </div>
+</div>
+</body>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+var timeout = undefined;
+ 
+$(".increment").bind("mousedown", function() {
+    timeout = setTimeout(function() {
+        alert(1);
+    }, 3000);
+});
+ 
+$(".increment").bind("mouseup", function() {
+    clearTimeout(timeout);
+});
+</script>
+</html>
